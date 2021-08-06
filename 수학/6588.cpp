@@ -1,13 +1,13 @@
-// 6588. °ñµå¹ÙÈåÀÇ ÃßÃà
+// 6588. ê³¨ë“œë°”íì˜ ì¶”ì¶•
 
 #include <iostream>
 using namespace std;
 
 const int MAX = 1000000;
-int prime[MAX]; //¼Ò¼ö ´ã´Â ¹è¿­
-int pn; //¼Ò¼ö °¹¼ö
+int prime[MAX]; //ì†Œìˆ˜ ë‹´ëŠ” ë°°ì—´
+int pn; //ì†Œìˆ˜ ê°¯ìˆ˜
 bool check[MAX];
-// Áö¿öÁ³À¸¸é true, ¾ÈÁö¿öÁ³À¸¸é false
+// ì§€ì›Œì¡Œìœ¼ë©´ true, ì•ˆì§€ì›Œì¡Œìœ¼ë©´ false
 
 int main() {
 	ios::sync_with_stdio(false);
@@ -15,7 +15,7 @@ int main() {
 	for (int i = 2; i <= MAX; i++) {
 		if (check[i] == false) {
 			prime[pn++] = i;
-			//prime[0]=2ºÎÅÍ prime[1]=3, ÀÌ·±½ÄÀ¸·Î ´ã±è
+			//prime[0]=2ë¶€í„° prime[1]=3, ì´ëŸ°ì‹ìœ¼ë¡œ ë‹´ê¹€
 			for (int j = i + i; j <= MAX; j += i)
 				check[j] = true;
 		}
