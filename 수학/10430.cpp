@@ -1,5 +1,5 @@
 //10430
-//³ª¸ÓÁö
+//Â³ÂªÂ¸Ã“ÃÃ¶
 
 #include <iostream>
 using namespace std;
