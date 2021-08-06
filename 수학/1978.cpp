@@ -1,10 +1,10 @@
-//1978. ¼Ò¼öÃ£±â
+//1978. ì†Œìˆ˜ì°¾ê¸°
 #include <iostream>
 using namespace std;
 
 int cnt = 0;
 
-//¼Ò¼öÀÌ¸é 1, ¼Ò¼ö¾Æ´Ï¸é0 ¸®ÅÏ
+//ì†Œìˆ˜ì´ë©´ 1, ì†Œìˆ˜ì•„ë‹ˆë©´0 ë¦¬í„´
 bool func(int x) {
 	if (x == 1)
 		return 0;
