@@ -17,8 +17,12 @@ int main() {
 			x = 0;
 		if (y == n)
 			y = 0;
-		for (int i = 1; i <= m * n; i++) {
-			if ((i % m == x) && (i % n == y)) {
+		// x,y둘다 만족시켜야 하므로 1부터 m*n까지다 확인하지 말고
+		// x 만족하는 수 만 건너뛰면서 y 만족하는지 확인하자
+		// 그럼 시간복잡도는 m*n 이 아니라 m이 된다.
+
+		for (int i = x; i <= m * n; i+=m) {
+			if (i % n == y){
 				day = i;
 				break;
 			}
