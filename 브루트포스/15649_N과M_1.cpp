@@ -10,6 +10,7 @@ int cnt = 1; // 수열 갯수
 
 void func(int index, int n, int m) {
 
+
 	if (index > m) {
 		for (int j = 1; j <= m; j++) {
 			cout << arr[j] << " ";
