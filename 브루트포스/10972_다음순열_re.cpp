@@ -15,9 +15,6 @@ int main(){
         cin>>x; 
         v.push_back(x);
     }
-    // for(int i=0; i<n; i++ ){
-    //     cout<<v[i]<<" ";
-    // }
 
     if(next_permutation(v.begin(),v.end())){
     for(int i=0; i<n; i++){

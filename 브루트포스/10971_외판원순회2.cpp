@@ -6,23 +6,32 @@ using namespace std;
 
 int n;
 int arr[11][11];
-int answer;
+int answer=2100000000;
 
 int func(int arr[][11], vector<int> v, int n){
     int result=0;
-    for(int i=0; i<n; i++){
-        cout<<v[i]<<" ";
-    }
-    cout<<"\n";
+ 
+   
     for(int i=0; i<n-1; i++){
-        if(arr[v[i]][v[i+1]]){ //i에서 i+1로 갈수있는 경우에만 진행
-            result+=arr[v[i]][v[i+1]];
-            cout<<"i = "<<i <<"\n";
-        }
+         if(arr[v[i]-1][v[i+1]-1]==0){ //길이 없는 경우
+            return 0;
+         }
+        
+        //i에서 i+1로 갈수있는 경우에만 진행
+            result+=arr[v[i]-1][v[i+1]-1];
+        
     }
+    //수열은 1,2,3,4 자연수고 인덱스는 0부터 시작하므로 1 빼줘야함.
     //마지막에, 처음 지점으로 돌아오는 비용 더해야함
-    result+=arr[v[n-1]][v[0]];
-    cout<<"result = "<<result <<'\n';
+    // n-1번째랑 0번째 길이 없는경우도 체크 해야함!
+    
+    if(arr[v[n-1]-1][v[0]-1]==0){
+    return 0;
+    }
+    else{
+    result+=arr[v[n-1]-1][v[0]-1];
+    }
+   
     return result;
 }
 
@@ -41,14 +50,14 @@ int main(){
             cin>>arr[i][j];
         }
     }
-     for(int i=0; i<n; i++){
-        for(int j=0; j<n; j++){
-            cin<<arr[i][j]<<" ";
-        }
-        cout<<"\n";
-    }
+
+
     do{
         int result=func(arr,v,n);
+        // result=0 인경우는 경로가 없는 경우인데, continue를 안하고 0을 더하면 최솟값 구하는데에 영향을 미치게 됨
+        if(result==0)
+        continue;
+        //  cout<<result<<"\n";
         if(answer>result)
         answer=result;
 

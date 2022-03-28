@@ -21,9 +21,6 @@ int main(){
             cout<<v[i]<<" ";
         }
     }else{
-           for(int i=0; i<n; i++){
-            cout<<v[i]<<" ";
-        }
         cout<<-1<<"\n";
     }
 
