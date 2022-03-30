@@ -1,4 +1,4 @@
-//110971번: 외판원 순회2
+//10971번: 외판원 순회2
 #include <iostream>
 #include <vector>
 #include <algorithm>

@@ -5,7 +5,8 @@
         "vector": "cpp",
         "algorithm": "cpp",
         "iterator": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "iosfwd": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
