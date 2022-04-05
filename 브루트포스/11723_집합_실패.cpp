@@ -54,10 +54,10 @@ int main(){
              vector <int>().swap(v); 
         }
 
-        for(int i=0; i<v.size(); i++){
-            cout<<v[i]<<" ";
-        }
+        // for(int i=0; i<v.size(); i++){
+        //     cout<<v[i]<<" ";
+        // }
         cout<<endl;
     }
 }
-// 이 코드 왜 런타임에러인지 모르겠다 썅 ...ㅠㅠㅠㅠㅠ
+// 이 코드 왜 런타임에러인지 모르겠다 
