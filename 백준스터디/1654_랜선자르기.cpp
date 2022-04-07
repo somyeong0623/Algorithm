@@ -17,23 +17,22 @@ using namespace std;
 
 int n,k;
 vector<int> v;
-long long answer;
+int answer;
 
 void func(){
-    // 랜선 길이의 최댓값은 ....?
+    // 랜선 길이의 최댓값은 v의 최댓값
     long long start=1;
     long long end=v[k-1];
+
+    //여기 주의 . start==end==mid일때 mid가 최댓값으로 답일수도 있음.
     while(start<=end){
         long long mid=(start+end)/2;
-        long long sum=0;
+        int sum=0;
         //mid가 현재 자르려는 길이
         for(int i=0; i<k; i++){
             sum+=v[i]/mid;
         }
-        cout<<"mid: "<<mid <<"\n";
-        cout<<"start: "<<start<<"\n";
-        cout<<"end: "<<end <<"\n";
-        cout<<"sum: "<<sum<<"\n";
+      
         if(sum>=n){
             if(answer<mid)
             answer=mid;
