@@ -1,12 +1,12 @@
 //10866_덱
 #include <iostream>
+#include <deque>
 using namespace std;
 
 int n;
-int front,back;
-int arr[10000];
 string s;
 int x;
+deque<int> dq;
 
 int main(){
     ios::sync_with_stdio(false);
@@ -15,63 +15,53 @@ int main(){
     cin>>n;
     while(n--){
         cin>>s;
-        if(s=="push_front"){
-            cin>>x;
-            arr[front]=x;
-            front++;
-            size++;
-        }else if(s=="push_back"){
-            cin>>x;
-            arr[back]=x;
-            back++;
-            size++;
+      if(s=="push_front"){
+          cin>>x;
+        dq.push_front(x);
+      }else if(s=="push_back"){
+          cin>>x;
+          dq.push_back(x);
+      }else if(s=="pop_front"){
+          if(dq.size()==0)
+          cout<<-1<<"\n";
+          else{
+          cout<<dq.front()<<"\n";
+          dq.pop_front();
+          }
 
-        }else if(s=="pop_front"){
-            if(size==0)
-            cout<<-1<<"\n";
-            else{
-                cout<<arr[front]<<"\n";
-                arr[front]=0;
-                front++;
-                size--;
-            }
-        }else if(s=="pop_back"){
-            if(size==0)
-            cout<<-1<<"\n";
-            else{
-                cout<<arr[back]<<"\n";
-                arr[back]=0;
-                back--;
-                size--;
-            }
-        }else if(s=="size"){
-            cout<<size<<"\n";
+      }else if(s=="pop_back"){
+          if(dq.size()==0)
+          cout<<-1<<"\n";
+          else{
+              cout<<dq.back()<<"\n";
+              dq.pop_back();
+          }
 
-        }else if(s=="emptty"){
-            if(size==0)
-            cout<<1<<"\n";
-            else
-            cout<<0<<"\n";
+      }else if(s=="size"){
+          cout<<dq.size()<<"\n";
 
-        }else if(s=="front"){
-            if(size==0)
-            cout<<-1<<"\n";
+      }else if(s=="empty"){
+          if(dq.empty())
+          cout<<1<<"\n";
+          else
+          cout<<0<<"\n";
 
-            else
-            cout<<arr[front]<<"\n";
-        }else{ //back인 경우
-            if(size==0)
-            cout<<-1<<"\n";
+      }else if(s=="front"){
+          if(dq.size()==0)
+          cout<<-1<<"\n";
+          else
+          cout<<dq.front()<<"\n";
+    
+      }else{ //back인 경우
+        if(dq.size()==0)
+        cout<<-1<<"\n";
+        else
+        cout<<dq.back()<<"\n";
 
-            else
-            cout<<arr[back]<<"\n";
-        }
-
-        for(int i=0;i<size; i++){
-            cout<<arr[i]<<" ";
-        }
-            
+      }
     }
+      
+
 
 
 }
