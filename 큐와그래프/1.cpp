@@ -1,20 +1,30 @@
 #include <iostream>
+#include <map>
 #include <vector>
 #include <algorithm>
+#include <queue>
 using namespace std;
 
-bool a[2000][2000];
-vector<int> g[2000];
-vector<pair<int,int>> edges;
+vector<vector<string>> v;
+queue<pair<int,int>> q;
 
-
-vector<int> v(3);
 int main(){
-    fill(v.begin(), v.end(), -4);
+    q.push(make_pair(1,2));
+    q.push(make_pair(2,3));
+    q.push(make_pair(2,3));
+    q.push(make_pair(4,3));
+    q.push(make_pair(5,5));
+    q.push(make_pair(5,5));
+    q.push(make_pair(5,5));
 
-    for(int i=0; i<v.size(); i++){
-        cout<<v[i] <<" ";
+    cout<<q.size()<<"\n";
+
+    for(int i=0; i<q.size(); i++){
+        cout<<q.front().first << " "<<q.front().second<<"\n";
+        q.pop();
     }
     
+
+
 
 }
