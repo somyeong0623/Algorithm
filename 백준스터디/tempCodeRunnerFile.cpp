@@ -41,9 +41,6 @@ void bfs(){
 }
 
 int main(){
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
-
     cin>>n>>m>>k>>x;
     for(int i=1; i<=n; i++){
         dist[i]=-1;
