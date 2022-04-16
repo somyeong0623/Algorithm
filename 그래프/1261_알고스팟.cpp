@@ -53,7 +53,7 @@ void bfs(){
                         q.push(make_pair(nx,ny));
                         }
                     }
-
+                //주의해야할점 : push는 dist가 갱신되었을때만 하고, 갱신 안되면 넣으면안됨(그렇게 하면 무한으로 돌게됨)
                 }
             }
 
@@ -81,12 +81,12 @@ int main(){
     }
 
     bfs();
-    for(int i=1;i <=n; i++){
-        for(int j=1; j<=m; j++){
-            cout<<dist[i][j]<<" ";
-        }
-        cout<<"\n";
-    }
-    cout<<"---------"<<"\n";
+    // for(int i=1;i <=n; i++){
+    //     for(int j=1; j<=m; j++){
+    //         cout<<dist[i][j]<<" ";
+    //     }
+    //     cout<<"\n";
+    // }
+    // cout<<"---------"<<"\n";
     cout<<dist[n][m]<<"\n";
 }

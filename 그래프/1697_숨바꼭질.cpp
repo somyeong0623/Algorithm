@@ -38,8 +38,8 @@ void bfs(){
          */
 
         if(ncur>=0 && ncur<=200000){
-            if(dist[ncur]==false){
-                // visit[ncur]=true;
+            if(visit[ncur]==false){
+                visit[ncur]=true;
                 dist[ncur]=dist[cur]+1;
                 q.push(ncur);
 
