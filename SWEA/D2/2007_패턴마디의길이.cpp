@@ -17,7 +17,7 @@ int answer;
 void func(string s){
     bool flag=true;
     answer=0;
-
+    // 왜 size=2 부터냐면, 1은 반복되는게 없다는 뜻이므로, 아예 마디가 존재하지 않기 떄문!~
     for(int size=2; size<=10; size++){
 
         if(s.substr(0,size)!=s.substr(size,size)){
