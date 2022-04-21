@@ -2,10 +2,9 @@
 #include <cmath>
 
 using namespace std;
-
 int main(){
-    double b=10;
-    double c= 3;
-    double a= b/c;
-    cout<<a;
+
+    int n=434;
+    n=n/10*10;
+    cout<<n<<"\n";
 }

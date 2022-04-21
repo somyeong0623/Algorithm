@@ -1,9 +1,9 @@
 // 모르겠어서 구글링하고 이해
 
-#include<string>
-#include<vector>
-#include<map>
-using namespaces std;
+#include <string>
+#include <vector>
+#include <map>
+using namespace std;
 
 vector<int> solution(vector<string> genres, vector<int> plays){
     vector<int> answer;
@@ -13,7 +13,7 @@ vector<int> solution(vector<string> genres, vector<int> plays){
 
     for(int i=0; i<genres.size(); i++){
         music[genres[i]]+=plays[i]; //music map에 장르별 플레이횟수 추가
-        musiclist[genres[i]][i]=plays[i] //musiclist map에 노래번호와 플레이 횟수 추가
+        musiclist[genres[i]][i]=plays[i]; //musiclist map에 노래번호와 플레이 횟수 추가
 
     }
 
