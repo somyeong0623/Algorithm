@@ -18,7 +18,7 @@ int TC;
 int n;
 int cnt;
 
-vector<char> v;
+
 
 int main()
 {
@@ -26,7 +26,7 @@ int main()
     for (int t = 1; t <= TC; t++)
     {
         cnt = 0;
-        v.clear();
+        vector<char> v;
         // cout<<"v.size: "<<v.size()<<"\n";
         v.push_back(0);
         cin >> n;
@@ -55,6 +55,7 @@ int main()
                 cout << "\n";
             }
         }
+        cout<<"\n";
 
     }
 }
