@@ -17,16 +17,17 @@ int p,q,r,s,w;
 int a,b; //a회사 요금, b회사 요금
 
 int func(){
-    a=p*w;
+    a=p*w; //a회사는 1리터당 p이므로 w리터니까 p*w
     b=0;
 
-    if(w<=r){
+    //b회사 가격 결정
+    if(w<=r){  //w<=r이면 q가격으로 고정
         b=q;
     }else{
-        b=q+s*(w-r);
+        b=q+s*(w-r); //w>r이면 q가격에다가 r초과한 만큼 1리터당 s원 반영
     }
 
-    if(a>b){
+    if(a>b){ //더 이득인것(적은것) 선택
         return b;
     }else{
         return a;
