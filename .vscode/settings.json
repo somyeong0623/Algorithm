@@ -20,7 +20,8 @@
         "type_traits": "cpp",
         "utility": "cpp",
         "queue": "cpp",
-        "memory": "cpp"
+        "memory": "cpp",
+        "chrono": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

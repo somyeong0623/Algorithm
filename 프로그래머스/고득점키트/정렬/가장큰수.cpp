@@ -28,7 +28,8 @@ string solution(vector<int> numbers) {
         
     sort(v.begin(),v.end(),cmp);
     
-    //만약 numbers=[0,0,0] 이면 답은 "000"이아니라 "0"이 되어야한다. 왜냐면 answer은 만들수 있는 가장 큰수를 문자열로 나타내기만 한것이므로 000이런건 없다. 그러므로 answer=="0"이고 v[i]=="0"이면 answer은 그냥 "0"으로 설정해주어야 함.
+    //만약 numbers=[0,0,0] 이면 답은 "000"이아니라 "0"이 되어야한다. 왜냐면 answer은 만들수 있는 가장 큰수를 문자열로 나타내기만 한것이므로 000이런건 없다. 
+    //그러므로 answer=="0"이고 v[i]=="0"이면 answer은 그냥 "0"으로 설정해주어야 함.
     
     for(int i=0; i<v.size(); i++){
         if(answer=="0" && v[i]=="0"){ 

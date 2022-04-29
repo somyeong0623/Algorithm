@@ -1,5 +1,4 @@
-//9658번: 돌게임4
-//모르겠다....
+//1303번: 전쟁-전투
 #include <iostream>
 #include <queue>
 #include <vector>

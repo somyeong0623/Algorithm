@@ -1,3 +1,4 @@
+//14490번: 백대열
 #include <iostream>
 #include <string>
 using namespace std;
