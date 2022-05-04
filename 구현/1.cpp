@@ -8,10 +8,8 @@ vector<int> v;
 
 int main(){
 
-    int a = abs(-233);
-    cout<<a<<"\n";
-    
+    cout<<'z'-'a'<<endl;
 
 
 
-}
+}d
