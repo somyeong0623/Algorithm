@@ -14,6 +14,8 @@ int max_cnt=0;
 vector<int> solution(vector<int> answers) {
     vector<int> answer;
     for(int i=0;i<answers.size(); i++){
+     
+        
         // 맞힌 문제 카운트
         if(v1[i%v1.size()]==answers[i])
             cnt1++;
@@ -21,6 +23,7 @@ vector<int> solution(vector<int> answers) {
             cnt2++;
         if(v3[i%v3.size()]==answers[i])
             cnt3++;
+    }
         
         //최댓값 찾기
         if(max_cnt<cnt1)
@@ -30,8 +33,7 @@ vector<int> solution(vector<int> answers) {
         if(max_cnt<cnt3)
             max_cnt=cnt3;
     
-    }
-
+        cout<<"영인 하이"<<"\n";
         //1번사람부터 확인하면 알아서 오름차순으로 들어간다.
         if(cnt1==max_cnt)
             answer.push_back(1);
