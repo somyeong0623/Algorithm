@@ -1,5 +1,5 @@
 //16967번: 배열 복원하기
-//몰라서 구글링함... 아직 안푼 상태
+//몰라서 구글링함... https://allmymight.tistory.com/m/11
 
 /*
 H, W, X, Y
@@ -12,37 +12,34 @@ H, W, X, Y
 #include <iostream>
 using namespace std;
 int arr[600][600]; //주어지는 배열
-int answer[300][300]; //정답 배열
+// int a[300][300]; //구하려는 배열
 int h,w,x,y;
 
 int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+
     cin>>h>>w>>x>>y;
-
-    int new_h= h+x;
-    int new_w= w+y;
-
-    for(int i=0; i<new_h; i++){
-        for(int j=0; j<new_w; j++){
+    //b배열 입력받기
+    for(int i=0; i<h+x; i++){
+        for(int j=0; j<w+y; j++){
             cin>>arr[i][j];
         }
     }
 
-    for(int i=0; i<h; i++){
-        for(int j=0; j<w; j++){
-          answer[i][j]=arr[i][j];
+    //원래배열(a)구하기
+    for(int i=x; i<h; i++){
+        for(int j=y; j<w; j++){
+            arr[i][j]=arr[i][j]-arr[i-x][j-y];
         }
     }
 
-    for(int i=x; i<h+x; i++){
-        for(int j=y; j<w+y; j++){
-            answer[i][j]=answer[i][j]-answer[i-x][j-x]; //여기 잘 이해안감
-        }
-    }
-
+    //원래 배열 출력
     for(int i=0; i<h; i++){
         for(int j=0; j<w; j++){
             cout<<arr[i][j]<<" ";
         }
-        cout<<"\n";
+        cout<<endl;
     }
+    
 }
