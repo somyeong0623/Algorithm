@@ -20,9 +20,10 @@ int main(){
 
 
     for(int i=3; i<=n; i++){
-        d[i][i-2]=max(d[i-2][i-4],d[i-2][i-3])+arr[i];
-        d[i][i-1]=d[i-1][i-3]+arr[i];
+        d[i][i-2]=max(d[i-2][i-4],d[i-2][i-3])+arr[i]; //d[i][i-2]: i-2번째계단을 밟고 ,i번째 계단 밟는경우 
+        d[i][i-1]=d[i-1][i-3]+arr[i];//d[i][i-1]: i-1번째 계단을 밟고, i번째 계단을 밟는 경우
     }
+
     answer=max(d[n][n-2],d[n][n-1]);
     cout<<answer<<"\n";
 

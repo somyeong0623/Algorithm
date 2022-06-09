@@ -1,4 +1,4 @@
-//1541. 잃어버린 괄호
+//1541. 잃어버린 괄호 (답보고 이해함)
 #include <iostream>
 #include <string>
 #include <vector>
