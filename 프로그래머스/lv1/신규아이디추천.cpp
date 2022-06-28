@@ -8,8 +8,8 @@ using namespace std;
 string solution(string new_id) {
     string answer = "";
     int s_size=new_id.size();
+
      //1단계: 대문자를 소문자로
-    
     for(int i=0; i<s_size; i++){
         char cur=new_id[i];
        
