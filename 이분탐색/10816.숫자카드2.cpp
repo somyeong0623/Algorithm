@@ -1,4 +1,4 @@
-//10816. 숫자 카드 2
+//10816. 숫자 카드 2 (index 직접 구현)
 
 #include <iostream>
 #include <vector>
@@ -9,24 +9,35 @@ using namespace std;
 int n,m;
 int cnt;
 
-// void bt(int x,vector<int> &v){
-//     int st=0;
-//     int en=n-1;
-//     int mid=0;
+int lower_index(int x, vector<int> &v){ //x가 등장하는 시작 index
+    int st=0; 
+    int en=n; //n-1 아님 주의
+    int mid=0;
+    while(st<en){
+        mid=(st+en)/2;
+        if(v[mid]>=x){
+            en=mid;
+        }else{
+            st=mid+1;
+        }
+    }
+    return st;
+}
 
-//     while(st<=en){
-//         mid=(st+en)/2;
-//         if(v[mid]==x){
-//             cnt[x]++;
-//         }else if(v[mid]>x){
-//             en=mid-1;
-//         }else{
-//             st=mid+1;
-//         }
-//     }
-// }
-
-
+int upper_index(int x, vector<int> &v){//x 초과인 숫자가 등장하기 시작하는 index
+    int st=0;
+    int en=n; //n-1 아님 주의
+    int mid=0;
+    while(st<en){
+        mid=(st+en)/2;
+        if(v[mid]>x){
+            en=mid;
+        }else{
+            st=mid+1;
+        }
+    }
+    return st;
+}
 
 int main(){
     ios::sync_with_stdio(false);
@@ -43,7 +54,7 @@ int main(){
     while(m--){
         int x;
         cin>>x;
-        cnt=upper_bound(v.begin(),v.end(),x)-lower_bound(v.begin(),v.end(),x);
+        cnt=upper_index(x,v)-lower_index(x,v);
         cout<<cnt<<" ";
     }
 }
